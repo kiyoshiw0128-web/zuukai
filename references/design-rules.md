@@ -1,6 +1,6 @@
 # 色と文字とレイアウトの決まり
 
-`zukai_core.py` の PALETTE・FONT・MIN_PT・CONTENT がこの決まりの実体です。会社のテンプレートに合わせるときは、そこを変えます。
+`zuukai_core.py` の PALETTE・FONT・MIN_PT・CONTENT がこの決まりの実体です。会社のテンプレートに合わせるときは、そこを変えます。
 
 ## 色（3色＋下地で足りる）
 

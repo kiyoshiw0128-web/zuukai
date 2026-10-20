@@ -1,4 +1,4 @@
-"""できた .pptx を検査する。zukai_core で作っていない資料にも使える。
+"""できた .pptx を検査する。zuukai_core で作っていない資料にも使える。
 
     python check_deck.py 資料.pptx [--min-narration 40] [--script 台本.md]
 

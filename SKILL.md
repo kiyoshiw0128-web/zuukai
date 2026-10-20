@@ -1,9 +1,9 @@
 ---
-name: zukai-slides
+name: zuukai
 description: 図解・グラフ・フロー・2x2などのビジネスの図を使い、タイトルと絵を見るだけで言いたいことが推測できる日本語の PowerPoint（.pptx）を作るスキル。全スライドのノートに、話し手がそのまま読めるナレーション（話し言葉の台本）を必ず入れる。説明資料、勉強会、提案、報告、教育のスライドを作りたい、図解でわかりやすくしたい、ナレーション付きのパワポがほしい、と頼まれたときに使う。
 ---
 
-# zukai-slides
+# zuukai
 
 **絵を見れば言いたいことが分かり、ナレーションを聞くとスッと入る** スライドを作ります。
 1枚に1つのことだけを言い、それを「言い切りの見出し」「図」「ナレーション」の3つで伝えます。
@@ -50,8 +50,8 @@ description: 図解・グラフ・フロー・2x2などのビジネスの図を�
 
 ```python
 import sys; sys.path.insert(0, "<このスキルのフォルダ>/scripts")
-from zukai_core import Deck, Box, CONTENT
-from zukai_parts import bars, ratio_grid, flow_steps, decision_flow  # など
+from zuukai_core import Deck, Box, CONTENT
+from zuukai_parts import bars, ratio_grid, flow_steps, decision_flow  # など
 
 d = Deck()
 sl = d.slide("議題を先に送ると、会議は短くなる",            # 見出し（言い切り）
@@ -65,7 +65,7 @@ d.save("出力.pptx")   # ナレーションのないスライドがあると保
 
 部品の一覧と引数は `references/visual-patterns.md` の「部品」列と、各関数の docstring にあります。部品にない図（ロジックツリー、ファネル、循環など）は `Slide.rect` `Slide.label` `Slide.arrow` を組み合わせて描きます。色と文字の決まりは `references/design-rules.md` です。
 
-ユーザーがひな形（会社のテンプレートなど）を渡したときは、その色とフォントに合わせて `zukai_core.PALETTE` と `Deck(font=...)` を変えます。
+ユーザーがひな形（会社のテンプレートなど）を渡したときは、その色とフォントに合わせて `zuukai_core.PALETTE` と `Deck(font=...)` を変えます。
 
 ### 6. 検査して直す
 ```bash

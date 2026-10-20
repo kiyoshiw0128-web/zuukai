@@ -10,8 +10,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "scripts"))
 
-from zukai_core import CONTENT, Box, Deck, icon_clock, icon_doc, icon_person  # noqa: E402
-from zukai_parts import (action_list, bars, before_after, decision_flow,  # noqa: E402
+from zuukai_core import CONTENT, Box, Deck, icon_clock, icon_doc, icon_person  # noqa: E402
+from zuukai_parts import (action_list, bars, before_after, decision_flow,  # noqa: E402
                          flow_steps, matrix_2x2, ratio_grid, role_cards, table, timeline)
 
 SRC = "出典：架空の例（見本用の数字）"

@@ -1,10 +1,10 @@
-"""zukai-slides の図解部品。どれも (Slide, Box, ...) を受け取り、Box の中に収めて描く。
+"""zuukai の図解部品。どれも (Slide, Box, ...) を受け取り、Box の中に収めて描く。
 
 どの部品を使うかは references/visual-patterns.md の「伝えたいこと → 図」の表で選ぶ。
 """
 from __future__ import annotations
 
-from zukai_core import ICONS, MIN_PT, Box, Slide
+from zuukai_core import ICONS, MIN_PT, Box, Slide
 
 STEP_COLORS = ("accent", "brown", "plum", "navy", "gray")
 

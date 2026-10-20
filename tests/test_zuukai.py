@@ -1,4 +1,4 @@
-"""zukai-slides のテスト。  python -m pytest tests"""
+"""zuukai のテスト。  python -m pytest tests"""
 from __future__ import annotations
 
 import sys
@@ -13,8 +13,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "examples"))
 
 import check_deck  # noqa: E402
-from zukai_core import CONTENT, Box, Deck, fit_size  # noqa: E402
-from zukai_parts import bars, decision_flow  # noqa: E402
+from zuukai_core import CONTENT, Box, Deck, fit_size  # noqa: E402
+from zuukai_parts import bars, decision_flow  # noqa: E402
 
 NARRATION = "左の棒を見てください。議題を送らなかった会議は平均52分でした。右は31分です。だから議題は前日に送ります。"
 

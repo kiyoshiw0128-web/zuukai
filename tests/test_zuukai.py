@@ -72,3 +72,9 @@ def test_example_builds_clean(tmp_path):
     out = tmp_path / "sample.pptx"
     build_example.build().save(str(out))
     assert check_deck.main([str(out)]) == 0
+
+
+def test_proposal_tag_is_visible_on_white():
+    sl = Deck().slide("見出し", NARRATION)
+    tag = sl.tag(1, 1, "提案")
+    assert str(tag.fill.fore_color.rgb) == "1F3A5F"

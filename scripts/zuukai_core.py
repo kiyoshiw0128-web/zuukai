@@ -214,9 +214,15 @@ class Slide:
         return c
 
     # 決まった部品
-    def tag(self, x, y, kind="根拠"):
-        """論文や数字の結果には「根拠」、自分たちの考えには「提案」の札を付ける。"""
-        fill, color = ("gray", "white") if kind == "根拠" else ("white", "navy")
+    def tag(self, x, y, kind="根拠", on_dark=False):
+        """論文や数字の結果には「根拠」、自分たちの考えには「提案」の札を付ける。
+
+        on_dark は紺の帯の上に置くとき True（札を白抜きにする）。
+        """
+        if kind == "根拠":
+            fill, color = "gray", "white"
+        else:
+            fill, color = ("white", "navy") if on_dark else ("navy", "white")
         return self.label(Box(x, y, 0.85, 0.42), kind, fill, color, 18)
 
     def panel(self, b=CONTENT, caption=None, tag=None):
@@ -236,7 +242,7 @@ class Slide:
         self.rect(Box(0.7, BAND_Y, 11.93, 0.85), "navy", rounded=True)
         x = 1.0
         if tag:
-            self.tag(x, BAND_Y + 0.21, tag)
+            self.tag(x, BAND_Y + 0.21, tag, on_dark=True)
             x = 2.15
         self.text(Box(x, BAND_Y, 12.33 - x, 0.85), message, 24, "white", True, anchor="middle")
 
